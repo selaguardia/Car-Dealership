@@ -10,7 +10,7 @@ class Car extends React.Component {
   });
 
   render() {
-    const { brand, model, price, image } = this.props.car;
+    const { brand, model, price, image, id } = this.props.car;
 
     return (
       <article>
@@ -33,7 +33,8 @@ class Car extends React.Component {
               alt="car" />
           </>
         }
-        
+        <button onClick={() => this.props.addToGarage(id)}>Add to Garage</button>
+        <button onClick={() => this.props.removeFromGarage(id)}>Remove from Garage</button>
       </article>
     )
   }

@@ -30,23 +30,43 @@ class CarContainer extends React.Component {
           'https://static.wikia.nocookie.net/1323a386-cee6-4e30-a26d-00f62c598778',
       }
     ],
-    garage: [
-      {
-        id: 'shnnnwyn',
-        brand: 'Ferrari',
-        model: 'Rojo',
-        price: '$5 million',
-        image:
-          'https://static.wikia.nocookie.net/1323a386-cee6-4e30-a26d-00f62c598778',
+    garage: []
+  }
+  
+  addToGarage = (id) => {
+    this.setState((prevState) => {
+      const foundCar = prevState.available.find(car => car.id === id);
+      console.log({foundCar});
+      return {
+        available: prevState.available.filter(car => car.id !== id),
+        garage: [...prevState.garage, foundCar]
       }
-    ],
-   } 
+    })
+  }
+
+  removeFromGarage = (id) => {
+    this.setState((prevState) => {
+      const foundCar = prevState.garage.find(car => car.id === id);
+      console.log({foundCar});
+      return {
+        garage: prevState.garage.filter(car => car.id !== id),
+        available: [...prevState.available, foundCar]
+      }
+    })
+  }
 
   render() {
     return (
       <div className="row">
-        <CarList title="Available" cars={this.state.available} />
-        <CarList title="Garage" cars={this.state.garage} />
+        <CarList 
+          title="Available"
+          addToGarage={this.addToGarage}
+          cars={this.state.available} />
+        
+        <CarList 
+          title="Garage" 
+          cars={this.state.garage}
+          removeFromGarage={this.removeFromGarage} />
       </div>
     )
   }

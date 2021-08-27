@@ -1,16 +1,91 @@
 .app {
-  text-align: center;
   padding: 25px;
+  min-height: calc(100vh - 50px);
+  background-color: #181e5e;
+  color: #ebebeb;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+
 .row {
   display: flex;
+  gap: 10px;
 }
+
 .col {
   flex: 1;
-  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
 }
-.col:last-of-type {
-  background-color: aqua;
+
+.col:nth-of-type(even) {
+  border-left: 2px solid #fb8f32;
+}
+
+.col > h3 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.col > h3::first-letter {
+  text-transform: capitalize;
+}
+
+.car {
+  padding: 20px;
+  background-color: #f5d83c;
+  display: grid;
+}
+
+.car > h3::first-letter {
+  text-transform: capitalize;
+}
+
+.car h3 {
+  margin: 0;
+  font-size: 25px;
+  background-color: #d90429;
+  padding: 10px;
+  color: white;
+}
+
+.car small {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.541);
+}
+
+.car strong {
+  margin: 10px 0;
+  color: #59a83f;
+}
+
+.car img {
+  width: 100%;
+  margin-top: 10px;
+}
+
+button {
+  background-color: #25177a;
+  padding: 10px;
+  font-size: 15px;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: #ebebeb;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+
+header {
+  background-color: #fb8f32;
+  padding: 20px;
+  font-weight: bolder;
+  font-size: 20px;
+  color: black;
 }
 
 button {
