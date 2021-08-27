@@ -7,8 +7,8 @@ class CarContainer extends React.Component {
     available: [
       {
         id: 'gfhsfnfgsf',
-        brand: 'lamborghini',
-        model: 'veneno',
+        brand: 'Lamborghini',
+        model: 'Veneno',
         price: '$4 million',
         image:
           'https://pictures.topspeed.com/IMG/crop/201303/2013-lamborghini-veneno-33_1600x0w.jpg',
@@ -23,9 +23,9 @@ class CarContainer extends React.Component {
       },
       {
         id: 'shnnnwyn',
-        brand: 'ferrari',
-        model: 'veneno',
-        price: 'laferrari',
+        brand: 'Ferrari',
+        model: 'Veneno',
+        price: '$2.1 million',
         image:
           'https://static.wikia.nocookie.net/1323a386-cee6-4e30-a26d-00f62c598778',
       }
@@ -33,9 +33,9 @@ class CarContainer extends React.Component {
     garage: [
       {
         id: 'shnnnwyn',
-        brand: 'ferrari',
-        model: 'veneno',
-        price: 'laferrari',
+        brand: 'Ferrari',
+        model: 'Rojo',
+        price: '$5 million',
         image:
           'https://static.wikia.nocookie.net/1323a386-cee6-4e30-a26d-00f62c598778',
       }
@@ -45,8 +45,8 @@ class CarContainer extends React.Component {
   render() {
     return (
       <div className="row">
-        <CarList title="available" cars={this.state.available} />
-        <CarList title="garage" cars={this.state.garage} />
+        <CarList title="Available" cars={this.state.available} />
+        <CarList title="Garage" cars={this.state.garage} />
       </div>
     )
   }

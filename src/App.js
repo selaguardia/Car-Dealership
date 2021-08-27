@@ -5,8 +5,8 @@ import './App.css';
 
 function App() {
   const car = {
-    brand: 'lamborghini',
-    model: 'veneno',
+    brand: 'Lamborghini',
+    model: 'Veneno',
     price: '$4 million',
     image:
       'https://pictures.topspeed.com/IMG/crop/201303/2013-lamborghini-veneno-33_1600x0w.jpg',

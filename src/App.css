@@ -12,3 +12,16 @@
 .col:last-of-type {
   background-color: aqua;
 }
+
+button {
+  padding: 3px 5px;
+  background-color: orange;
+  border-radius: 3px;
+  margin: 1px 15px;
+  font-size: 18px;
+  box-shadow: 5px 5px 10px black;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
